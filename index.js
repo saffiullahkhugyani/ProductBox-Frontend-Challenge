@@ -8,11 +8,11 @@ var logger = require('./lib/logger');
 
 var items = require('./routes/items');
 
-var cors = require('cors')
-app.use(cors);
-
 var app = express();
 var log = logger(app);
+
+var cors = require('cors');
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
